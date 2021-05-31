@@ -1,0 +1,43 @@
+body {
+  padding-top: 5rem;
+}
+.domain-template {
+  padding: 3rem 1.5rem;
+  text-align: center;
+  border: 1px solid darkblue;
+}
+
+table {
+    margin: 0 auto; /* or margin: 0 auto 0 auto */
+    font-size: small;
+  }
+
+img {
+  border: solid black 1px;
+  max-width:100%;
+  max-height:100%;
+}
+
+.ip {
+  text-align: center;
+}
+
+.col {
+  border: lightgrey solid 1px;
+  background: azure;
+  margin-right: 2px;
+}
+
+p {
+  text-align: center;
+  font-size: small;
+}
+
+.ssl {
+  font-size: small;
+}
+
+.text {
+  padding-top: 5px;
+  font-size: small;
+}

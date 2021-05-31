@@ -1,0 +1,89 @@
+{% extends 'base.html' %}
+{% load static %}
+<title>Support Fast Panel</title>
+{% block container %}
+    <div class="ip">
+    {{ domain }}: {{ ipadreses }}
+    <p>{{ server }}<br>
+    Nginx IP: {{ nginx_ip }}<br>
+    SSL IP: {{ ssl_ip }}</p>
+    </div>
+    <br>
+    <div class="container">
+        <div class="row">
+         <div class="col">
+         <p>Dig info</p>
+    <table border="1">
+       {% for ns in name_servers %}
+       <tr><td>{{ ns }}</td></tr>
+       {% endfor %}
+       {% for mx in mx_servers %}
+       <tr><td>{{ mx }}</td></tr>
+       {% endfor %}
+   </table>
+   <br>
+        <p>IP у поддомена www: {{ www_ip }}</p>
+        </div>
+         <div class="col">
+         <p>Чей IP?</p>
+    <table border="1">
+    <th>IP</th>
+    <th>Организация</th>
+   </tr>
+        <tr><td>{{ ipadreses }}</td><td>{{ organisations }}</td></tr>
+    </table>
+             <br>
+         </div>
+         <div class="col">
+             <p>Ответ сервера</p>
+    <p>{{ domain }}</p> 
+    <p>{{ answer_code }}</p>
+         </div>
+         <div class="col">
+    <p>Скорость работы сайта</p>
+   <table border="1">
+    <tr><td>BackEnd (ms)</td><td>{{ back_end }}</td></tr>
+    <tr><td>FronEnd (ms)</td><td>{{ fron_end }}</td></tr>
+    <tr><td>All time (ms)</td><td>{{ all_time }}</td></tr>
+   </table>
+         </div>
+        <br>
+    </div>
+        <div class=row>
+            <div class="col ssl">
+                <div class='text'> 
+                <b>Редирект:</b> {{ redirect }}<br>
+                <b>Протокол:</b> {{ protocol }}<br>
+                <b>Центр:</b> {{ issuer_by }}<br>
+                <b>Валиден с:</b> {{ notbefore }}<br>
+                <b>Валиден до:</b> {{ notafter }}<br>
+                </div>
+            </div>
+            <div class="col">
+                <p>Whois</p>
+                    <div class="text">
+                        {{ state }}<br>
+                        {{ registrar }}<br>
+                        {{ created }}<br>
+                        {{ paid_till }}<br>
+                        {{ free_date }}<br>
+                        {{ last_update }}<br>
+                        <br>
+                    </div>
+                </div>
+            <div class="col">
+                <div class="text">
+                    {% for data in customer_data %}
+                    <p>{{ data }}</p>
+                    {% endfor %}
+                </div>
+            </div>
+            <div class="col">Здесь может быть что-то очень нужное...
+                <img src="{% static "img/joker_card.png" %}" alt="Joker">
+            </div>
+        </div>
+    </div>
+    <br>
+    <p style="text-align: center">Скриншот сайта</p>
+    <img src="{% static "img/screenshots/screenshot.png" %}" alt="Site screenshot">
+{% endblock %}
