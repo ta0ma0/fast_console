@@ -30,12 +30,16 @@ PyCharmFP-work/fast_panel_site$ pip3 install -r requirements.txt
 ```
 pip3 install pyopenssl
 ```
+5. Заменить имя пользователя в файла mainapp/opt/server_info.py на шестой троке
+```
+command = subprocess.Popen(['ssh', 'ruslanakmanov@support-console.beget', '"yii"', '"info"', '"%s"' %(domain)], stdout=subprocess.PIPE)
+```
 
-5. Запустить сервер.
+6. Запустить сервер.
 ```
 PyCharmFP-work/fast_panel_site$ python3 manage.py runserver
 ```
-6. Когда нужно прочекать домен, запусти в консоли функцию bash c доменом без
+7. Когда нужно прочекать домен, запусти в консоли функцию bash c доменом без
 протокола
 ```
 domains google.com
