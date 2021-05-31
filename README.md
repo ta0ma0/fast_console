@@ -34,12 +34,15 @@ pip3 install pyopenssl
 ```
 command = subprocess.Popen(['ssh', 'ruslanakmanov@support-console.beget', '"yii"', '"info"', '"%s"' %(domain)], stdout=subprocess.PIPE)
 ```
-
-6. Запустить сервер.
+6. Добавить драйверу права на исполение
+```
+chmod +x opt/chromedriver
+```
+7. Запустить сервер.
 ```
 PyCharmFP-work/fast_panel_site$ python3 manage.py runserver
 ```
-7. Когда нужно прочекать домен, запусти в консоли функцию bash c доменом без
+8. Когда нужно прочекать домен, запусти в консоли функцию bash c доменом без
 протокола
 ```
 domains google.com
