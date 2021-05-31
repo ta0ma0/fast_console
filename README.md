@@ -26,6 +26,11 @@ source venv/bin/activate
 ```
 PyCharmFP-work/fast_panel_site$ pip3 install -r requirements.txt
 ```
+4.1 Поставить pyopenssl вручную
+```
+pip3 install pyopenssl
+```
+
 5. Запустить сервер.
 ```
 PyCharmFP-work/fast_panel_site$ python3 manage.py runserver
